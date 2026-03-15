@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio template for a digital design and verification engineer.">
+  <title>Digital Design & Verification Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="site-bg" aria-hidden="true"></div>
+
+  <header class="hero" id="top">
+    <nav class="top-nav">
+      <a class="brand" href="#top">M. Tareq</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Technical Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero-content reveal">
+      <p class="eyebrow">Digital Design and Verification Engineer</p>
+      <h1>Building Reliable Silicon Through Clean RTL and Rigorous Verification</h1>
+      <p>
+        End-to-end experience across architecture-aware RTL development, constrained-random
+        verification, FPGA bring-up, and implementation-aware optimization.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="panel reveal" aria-labelledby="about-title">
+      <h2 id="about-title">About</h2>
+      <p>
+        I design and verify digital systems with a focus on correctness, traceability, and timing closure.
+        My workflow bridges simulation-first validation with hardware prototyping, ensuring design intent is
+        preserved from specification through implementation.
+      </p>
+    </section>
+
+    <section id="skills" class="panel reveal" aria-labelledby="skills-title">
+      <h2 id="skills-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <article class="skill-card">
+          <h3>SystemVerilog</h3>
+          <p>Parameterized RTL, interfaces, assertions, coverage-driven coding style.</p>
+        </article>
+        <article class="skill-card">
+          <h3>UVM</h3>
+          <p>Layered testbench architecture, scoreboarding, sequence libraries, and reusable VIP.</p>
+        </article>
+        <article class="skill-card">
+          <h3>FPGA Prototyping</h3>
+          <p>Rapid functional validation, board-level integration, and timing-aware debug.</p>
+        </article>
+        <article class="skill-card">
+          <h3>Physical Implementation</h3>
+          <p>Constraint strategy, synthesis/PnR awareness, and optimization for area, timing, and power.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="panel reveal" aria-labelledby="projects-title">
+      <div class="section-head">
+        <h2 id="projects-title">Projects</h2>
+        <p>Project cards pair objective technical summaries with image-focused artifacts and direct links.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card">
+          <figure class="project-media">
+            <img src="assets/elastic-buffer-env-bd.png" alt="Elastic Buffer UVM environment block diagram">
+          </figure>
+          <div class="project-body">
+            <h3>Elastic Buffer Design and UVM Verification</h3>
+            <p>
+              Verified a rate-matching FIFO that compensates for recovered-clock and system-clock drift
+              using SKP insertion and SKP drop logic driven by configurable occupancy thresholds.
+              The UVM environment targeted continuous flow behavior, event signaling, and error-state robustness.
+            </p>
+            <p class="tags">UVM Testbench | CTC (SKP Add/Drop) | FIFO Occupancy Control</p>
+            <p class="project-links">
+              <a href="https://github.com/mohamedtareq24/Elastic-Buffer-Design-UVM-Verification" target="_blank" rel="noopener noreferrer">Repository</a>
+              <a href="https://github.com/mohamedtareq24/Elastic-Buffer-Design-UVM-Verification/blob/main/EB_features.md" target="_blank" rel="noopener noreferrer">Feature Specification</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <figure class="project-media">
+            <img src="assets/dsp-course-fir-ila.png" alt="System ILA capture for AXI FIR filter integration on Zynq">
+          </figure>
+          <div class="project-body">
+            <h3>AXI FIR Filter IP on Zynq US+</h3>
+            <p>
+              Developed an AXI-compatible transposed-form FIR IP with parameterized order and data width,
+              then integrated and validated it on an AVNET U96 Zynq US+ platform using AXI-Lite/AXI-Stream,
+              simulation correlation, and software-driven register-level verification from ARM A53.
+            </p>
+            <p class="tags">AXI FIR IP | Zynq US+ Prototyping | MATLAB | HW-SW Codesign</p>
+            <p class="project-links">
+              <a href="https://github.com/mohamedtareq24/DSP_course" target="_blank" rel="noopener noreferrer">Repository</a>
+              <a href="https://github.com/mohamedtareq24/DSP_course/blob/main/docs/FIR/Readme.md" target="_blank" rel="noopener noreferrer">FIR Documentation</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <figure class="project-media">
+            <img src="assets/matrix-inversion-qr-stage.jpg" alt="QR-stage architecture for a CORDIC-based 3x3 matrix inversion processor">
+          </figure>
+          <div class="project-body">
+            <h3>Matrix Inversion Processor via CORDIC QR Decomposition</h3>
+            <p>
+              3x3 matrix inversion accelerator using QR decomposition with iterative CORDIC arithmetic on a fixed-point Q3.13 datapath,AXI-Stream matrix loading, and a MATLAB reference model for algorithm correlation.
+            </p>
+            <p class="tags">CORDIC QR | MATLAB HDL Verifier| AXI-Stream | UVM Testbench | DPI-C</p>
+            <p class="project-links">
+              <a href="https://github.com/mohamedtareq24/Matrix-Inversion-processor-" target="_blank" rel="noopener noreferrer">Repository</a>
+              <a href="https://github.com/mohamedtareq24/Matrix-Inversion-processor-/blob/main/README.md" target="_blank" rel="noopener noreferrer">Project Overview</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <figure class="project-media">
+            <img src="assets/cv32e40p-asic-layout.png" alt="ASIC implementation view for CV32E40P-based microcontroller">
+          </figure>
+          <div class="project-body">
+            <h3>ASIC Implementation of the PULPino SoC</h3>
+            <p>
+              Implemented a PULPino/CV32E40P-based RISC-V microcontroller through a full physical-design
+              flow including synthesis, floorplanning, power planning, placement, clock-tree synthesis,
+              routing, and chip finishing, targeting High Performance DSP applications.
+            </p>
+            <p class="tags">RISC-V SoC | Physical Implementation | PnR Flow</p>
+            <p class="project-links">
+              <a href="https://github.com/mohamedtareq24/cv32e40p" target="_blank" rel="noopener noreferrer">Repository</a>
+              <a href="assets/cv32e40p-asic-wireless-charging.pdf" target="_blank" rel="noopener noreferrer">ASIC Report (PDF)</a>
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <details class="project-maintenance">
+        <summary>Add/Remove Projects Quickly</summary>
+        <p>
+          Duplicate one <code>&lt;article class="project-card"&gt;...&lt;/article&gt;</code> block inside
+          <code>.projects-grid</code> to add a project, or delete that block to remove a project.
+          Update image path, technical description, and <code>.project-links</code> URLs.
+        </p>
+      </details>
+    </section>
+
+    <section id="certificates" class="panel reveal" aria-labelledby="certificates-title">
+      <div class="section-head">
+        <h2 id="certificates-title">Certificates</h2>
+        <p>Verified coursework and professional training relevant to ASIC, FPGA, and verification.</p>
+      </div>
+
+      <div class="cert-grid">
+        <article class="cert-card">
+          <figure class="cert-media">
+            <img src="assets/certs/ICpedia_Certificate.jpg" alt="ICpedia internship certificate for ASIC digital implementation">
+          </figure>
+          <h3>ASIC Digital Implementation (PnR) Internship</h3>
+          <p class="cert-meta">Issuer: ICpedia | Date: Sep 2023</p>
+          <p>
+            Internship completion certificate focused on ASIC digital implementation,
+            including place-and-route awareness and practical implementation workflow exposure.
+          </p>
+          <p class="project-links">
+            <a href="assets/certs/ICpedia_Certificate.jpg" target="_blank" rel="noopener noreferrer">View Certificate</a>
+          </p>
+        </article>
+
+        <article class="cert-card">
+          <figure class="cert-media">
+            <img src="assets/certs/STM_Certificate.jpeg" alt="STEM your way certificate for MIPS implementation and STM32 architecture training">
+          </figure>
+          <h3>MIPS Implementation and STM32 Architecture Training</h3>
+          <p class="cert-meta">Issuer: STEM Your Way / STMicroelectronics | Date: Jul-Oct 2023</p>
+          <p>
+            Completed architecture and implementation training covering embedded processor concepts,
+            microcontroller architecture, and hands-on digital design exercises.
+          </p>
+          <p class="project-links">
+            <a href="assets/certs/STM_Certificate.jpeg" target="_blank" rel="noopener noreferrer">View Certificate</a>
+          </p>
+        </article>
+
+        <article class="cert-card">
+          <figure class="cert-media">
+            <img src="assets/certs/ADI_Certificate.jpg" alt="Analog Devices internship program certificate of achievement">
+          </figure>
+          <h3>Analog Devices Internship Program</h3>
+          <p class="cert-meta">Issuer: Analog Devices Cairo | Date: Sep 2023</p>
+          <p>
+            Completed five-week internship training focused on applied electronics engineering workflow
+            and industry practices in a professional product-oriented environment.
+          </p>
+          <p class="project-links">
+            <a href="assets/certs/ADI_Certificate.jpg" target="_blank" rel="noopener noreferrer">View Certificate</a>
+          </p>
+        </article>
+
+        <article class="cert-card">
+          <figure class="cert-media">
+            <img src="assets/certs/certificate.png" alt="ICpedia certificate of completion for SerDes and digital design internship">
+          </figure>
+          <h3>Summer Internship: SerDes Blocks and Digital Design Verification</h3>
+          <p class="cert-meta">Issuer: ICpedia | Date: Oct 2024</p>
+          <p>
+            Certificate recognizes internship work on SerDes-oriented blocks with digital design and
+            verification concepts for ASIC/FPGA systems.
+          </p>
+          <p class="project-links">
+            <a href="assets/certs/CERT.pdf" target="_blank" rel="noopener noreferrer">View Certificate</a>
+          </p>
+        </article>
+
+        <article class="cert-card">
+          <figure class="cert-media badge-media">
+            <img src="assets/certs/UVM.jpg" alt="Cadence certificate for SystemVerilog Accelerated Verification with UVM v1.2.6">
+          </figure>
+          <h3>SystemVerilog Accelerated Verification with UVM v1.2.6</h3>
+          <p class="cert-meta">Issuer: Cadence Training Services | Completion Date: Sep 16, 2024</p>
+          <p>
+            Cadence training certificate covering accelerated UVM-based verification methodology,
+            practical SystemVerilog usage, and scalable testbench development concepts.
+          </p>
+          <p class="project-links">
+            <a href="assets/certs/UVM.jpg" target="_blank" rel="noopener noreferrer">View Certificate</a>
+          </p>
+        </article>
+
+        <article class="cert-card">
+          <figure class="cert-media badge-media">
+            <img src="assets/certs/systemverilog-assertions-v5-1-exam.png" alt="SystemVerilog Assertions exam badge">
+          </figure>
+          <h3>SystemVerilog Assertions Exam Badge</h3>
+          <p class="cert-meta">Issuer: Verification Academy (Badge) | Domain: SVA</p>
+          <p>
+            Highlights practical understanding of assertion-based verification concepts used for
+            protocol checking, property validation, and regression confidence.
+          </p>
+          <p class="project-links">
+            <a href="assets/certs/systemverilog-assertions-v5-1-exam.png" target="_blank" rel="noopener noreferrer">View Badge</a>
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

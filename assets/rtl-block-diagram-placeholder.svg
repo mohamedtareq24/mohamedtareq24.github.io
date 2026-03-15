@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="800" viewBox="0 0 1280 800" role="img" aria-label="RTL block diagram placeholder">
+  <rect width="1280" height="800" fill="#e8efe9"/>
+  <rect x="70" y="80" width="320" height="170" rx="16" fill="#bad3c1" stroke="#2f5943" stroke-width="3"/>
+  <rect x="480" y="80" width="320" height="170" rx="16" fill="#c5d6e5" stroke="#2f4d59" stroke-width="3"/>
+  <rect x="890" y="80" width="320" height="170" rx="16" fill="#cde7df" stroke="#2f5943" stroke-width="3"/>
+  <rect x="250" y="360" width="780" height="290" rx="16" fill="#dfe8e1" stroke="#476454" stroke-width="4"/>
+  <path d="M390 165h90M800 165h90M640 250v100" stroke="#1f3c2f" stroke-width="8" fill="none"/>
+  <text x="640" y="535" text-anchor="middle" font-family="Trebuchet MS, sans-serif" font-size="52" fill="#1f3c2f">RTL BLOCK DIAGRAM</text>
+</svg>
