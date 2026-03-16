@@ -6,6 +6,13 @@
   <meta name="description" content="Portfolio template for a digital design and verification engineer.">
   <title>Digital Design & Verification Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YNJLQJ3YVC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-YNJLQJ3YVC');
+  </script>
 </head>
 <body>
   <div class="site-bg" aria-hidden="true"></div>
@@ -18,7 +25,7 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#certificates">Certificates</a></li>
       </ul>
-      <a class="header-cv-btn" href="assets/Mohamed-Tarek-Mohamed-CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+      <a class="header-cv-btn cv-download" href="assets/Mohamed-Tarek-Mohamed-CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
     </nav>
 
     <div class="hero-content reveal">
@@ -35,7 +42,7 @@
       <p class="hero-links neon-links">
         <a href="https://github.com/mohamedtareq24" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/mt2410/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="assets/Mohamed-Tarek-Mohamed-CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+        <a class="cv-download" href="assets/Mohamed-Tarek-Mohamed-CV.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
       </p>
     </div>
   </header>
@@ -141,6 +148,24 @@
             <p class="project-links">
               <a href="https://github.com/mohamedtareq24/cv32e40p" target="_blank" rel="noopener noreferrer">Repository</a>
               <a href="assets/cv32e40p-asic-wireless-charging.pdf" target="_blank" rel="noopener noreferrer">ASIC Report (PDF)</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <figure class="project-media">
+            <img src="assets/ode-solver-nios2.gif" alt="Animated VGA output of NIOS II controlled ODE solver for spring-mass-damper simulation">
+          </figure>
+          <div class="project-body">
+            <h3>NIOS II Controlled ODE Solver (Spring-Mass-Damper)</h3>
+            <p>
+              Implemented a hardware-accelerated ODE solver on Cyclone IV using a NIOS II soft processor,
+              with JTAG-UART driven parameter input and VGA output to visualize dynamic system response in real time.
+            </p>
+            <p class="tags">NIOS II | ODE Solver | Cyclone IV | VGA Interface | Embedded C | Verilog</p>
+            <p class="project-links">
+              <a href="https://github.com/mohamedtareq24/ODE_solver_NIOS_II" target="_blank" rel="noopener noreferrer">Repository</a>
+              <a href="https://github.com/mohamedtareq24/ODE_solver_NIOS_II/blob/main/README.md" target="_blank" rel="noopener noreferrer">Project Overview</a>
             </p>
           </div>
         </article>
@@ -260,5 +285,18 @@
       </div>
     </section>
   </main>
+  <script>
+    document.querySelectorAll('.cv-download').forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (typeof gtag === 'function') {
+          gtag('event', 'cv_click', {
+            event_category: 'engagement',
+            event_label: 'Download CV',
+            value: 1
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>
