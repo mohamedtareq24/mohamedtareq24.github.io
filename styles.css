@@ -1,14 +1,14 @@
 :root {
-  --bg: #0b1118;
-  --bg-accent: #121b27;
-  --surface: #111a26;
-  --surface-strong: #162233;
-  --ink: #d9e5f2;
-  --muted: #95a6ba;
-  --line: #2a3a4f;
-  --signal: #35c3b4;
-  --signal-soft: #1c3e43;
-  --link: #86b9ff;
+  --bg: #07080d;
+  --bg-accent: #0f1020;
+  --surface: #111226;
+  --surface-strong: #1a1633;
+  --ink: #e8e9ff;
+  --muted: #a5a6c9;
+  --line: #2d2f4f;
+  --signal: #7f8dff;
+  --signal-soft: #25244a;
+  --link: #9db3ff;
   --shadow: 0 20px 44px rgba(0, 0, 0, 0.35);
   --radius: 18px;
 }
@@ -35,9 +35,9 @@ body {
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(circle at 12% 18%, rgba(33, 102, 88, 0.34), transparent 42%),
-    radial-gradient(circle at 86% 3%, rgba(45, 98, 173, 0.3), transparent 35%),
-    linear-gradient(135deg, var(--bg) 0%, var(--bg-accent) 45%, #101822 100%);
+    radial-gradient(circle at 12% 18%, rgba(81, 105, 255, 0.28), transparent 42%),
+    radial-gradient(circle at 86% 3%, rgba(127, 66, 212, 0.22), transparent 35%),
+    linear-gradient(135deg, var(--bg) 0%, var(--bg-accent) 45%, #080915 100%);
 }
 
 .hero,
@@ -94,13 +94,13 @@ main {
 
 .header-cv-btn {
   text-decoration: none;
-  color: #f8fff9;
-  border: 1px solid rgba(102, 255, 153, 0.9);
-  background: linear-gradient(135deg, rgba(13, 44, 37, 0.92), rgba(18, 62, 52, 0.84));
+  color: #eef1ff;
+  border: 1px solid rgba(128, 144, 255, 0.9);
+  background: linear-gradient(135deg, rgba(28, 34, 79, 0.92), rgba(42, 28, 88, 0.84));
   box-shadow:
-    0 0 0.45rem rgba(102, 255, 153, 0.55),
-    0 0 1rem rgba(102, 255, 153, 0.25),
-    inset 0 0 0.35rem rgba(102, 255, 153, 0.2);
+    0 0 0.45rem rgba(128, 144, 255, 0.55),
+    0 0 1rem rgba(128, 144, 255, 0.25),
+    inset 0 0 0.35rem rgba(128, 144, 255, 0.2);
   padding: 0.4rem 1rem;
   border-radius: 999px;
   font-family: "Trebuchet MS", "Gill Sans", sans-serif;
@@ -114,11 +114,11 @@ main {
 .header-cv-btn:hover,
 .header-cv-btn:focus-visible {
   transform: translateY(-1px) scale(1.02);
-  border-color: #f7fff8;
+  border-color: #f4f6ff;
   box-shadow:
-    0 0 0.6rem rgba(216, 255, 228, 0.8),
-    0 0 1.2rem rgba(102, 255, 153, 0.46),
-    inset 0 0 0.5rem rgba(226, 255, 234, 0.3);
+    0 0 0.6rem rgba(225, 232, 255, 0.8),
+    0 0 1.2rem rgba(128, 144, 255, 0.46),
+    inset 0 0 0.5rem rgba(212, 221, 255, 0.3);
 }
 
 .hero-content {
@@ -138,7 +138,7 @@ main {
   inset: -30% auto auto -15%;
   width: 46%;
   height: 130%;
-  background: linear-gradient(120deg, rgba(52, 255, 198, 0.14), transparent 58%);
+  background: linear-gradient(120deg, rgba(130, 144, 255, 0.16), transparent 58%);
   transform: skewX(-12deg);
   pointer-events: none;
   animation: heroSweep 8s linear infinite;
@@ -181,14 +181,14 @@ h1 {
 
 .neon-links a {
   text-decoration: none;
-  color: #d7ffff;
-  border: 1px solid rgba(31, 255, 232, 0.72);
-  background: linear-gradient(135deg, rgba(9, 32, 42, 0.95), rgba(18, 47, 64, 0.84));
+  color: #e7edff;
+  border: 1px solid rgba(127, 142, 255, 0.72);
+  background: linear-gradient(135deg, rgba(20, 26, 57, 0.95), rgba(38, 24, 76, 0.84));
   box-shadow:
-    0 0 0.4rem rgba(32, 255, 226, 0.5),
-    0 0 0.95rem rgba(32, 255, 226, 0.28),
-    inset 0 0 0.4rem rgba(32, 255, 226, 0.18);
-  text-shadow: 0 0 0.55rem rgba(127, 255, 235, 0.66);
+    0 0 0.4rem rgba(127, 142, 255, 0.5),
+    0 0 0.95rem rgba(127, 142, 255, 0.28),
+    inset 0 0 0.4rem rgba(127, 142, 255, 0.18);
+  text-shadow: 0 0 0.55rem rgba(206, 218, 255, 0.66);
   padding: 0.55rem 1.55rem;
   min-width: 13.2rem;
   text-align: center;
@@ -202,20 +202,20 @@ h1 {
 }
 
 .neon-links a:nth-child(2) {
-  border-color: rgba(92, 255, 138, 0.78);
+  border-color: rgba(154, 110, 255, 0.78);
   box-shadow:
-    0 0 0.42rem rgba(102, 255, 153, 0.52),
-    0 0 1rem rgba(102, 255, 153, 0.25),
-    inset 0 0 0.38rem rgba(102, 255, 153, 0.2);
+    0 0 0.42rem rgba(154, 110, 255, 0.52),
+    0 0 1rem rgba(154, 110, 255, 0.25),
+    inset 0 0 0.38rem rgba(154, 110, 255, 0.2);
   animation-delay: 180ms;
 }
 
 .neon-links a:nth-child(3) {
-  border-color: rgba(255, 183, 88, 0.84);
+  border-color: rgba(113, 181, 255, 0.84);
   box-shadow:
-    0 0 0.43rem rgba(255, 183, 88, 0.5),
-    0 0 1rem rgba(255, 183, 88, 0.24),
-    inset 0 0 0.36rem rgba(255, 183, 88, 0.2);
+    0 0 0.43rem rgba(113, 181, 255, 0.5),
+    0 0 1rem rgba(113, 181, 255, 0.24),
+    inset 0 0 0.36rem rgba(113, 181, 255, 0.2);
   animation-delay: 320ms;
 }
 
@@ -223,11 +223,11 @@ h1 {
 .neon-links a:focus-visible {
   color: #ffffff;
   transform: translateY(-2px) scale(1.02);
-  border-color: #f7fff8;
+  border-color: #edf2ff;
   box-shadow:
-    0 0 0.65rem rgba(241, 255, 252, 0.75),
-    0 0 1.35rem rgba(96, 255, 204, 0.48),
-    inset 0 0 0.58rem rgba(209, 255, 245, 0.28);
+    0 0 0.65rem rgba(226, 236, 255, 0.75),
+    0 0 1.35rem rgba(123, 146, 255, 0.48),
+    inset 0 0 0.58rem rgba(208, 221, 255, 0.28);
 }
 
 main {
@@ -254,26 +254,26 @@ main {
   display: inline-flex;
   align-items: center;
   border-radius: 999px;
-  border: 1px solid #2d4e70;
-  background: linear-gradient(140deg, #102133, #14293f);
-  color: #cfe4ff;
+  border: 1px solid #3b3f78;
+  background: linear-gradient(140deg, #171a36, #251847);
+  color: #dbe4ff;
   font-family: "Trebuchet MS", "Gill Sans", sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   line-height: 1;
   padding: 0.4rem 0.72rem;
-  box-shadow: inset 0 0 0.35rem rgba(109, 170, 255, 0.14);
+  box-shadow: inset 0 0 0.35rem rgba(140, 153, 255, 0.14);
   transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
 .skill-tag:hover,
 .skill-tag:focus-visible {
   transform: translateY(-1px);
-  border-color: #4f78a9;
+  border-color: #6675d8;
   box-shadow:
-    0 0 0.6rem rgba(123, 182, 255, 0.26),
-    inset 0 0 0.42rem rgba(125, 191, 255, 0.2);
+    0 0 0.6rem rgba(122, 143, 255, 0.26),
+    inset 0 0 0.42rem rgba(162, 173, 255, 0.2);
 }
 
 .section-head {
@@ -297,8 +297,8 @@ main {
 }
 
 .cert-card {
-  background: #0f1824;
-  border: 1px solid #29405a;
+  background: #131425;
+  border: 1px solid #373a63;
   border-radius: 14px;
   padding: 1rem;
 }
@@ -309,7 +309,7 @@ main {
   border: 1px solid var(--line);
   border-radius: 10px;
   overflow: hidden;
-  background: #0b1320;
+  background: #0c0d18;
 }
 
 .cert-media img {
@@ -359,17 +359,17 @@ main {
 .project-card:hover,
 .project-card:focus-within {
   transform: translateY(-8px) scale(1.045);
-  border-color: #4e739f;
+  border-color: #616fcf;
   box-shadow:
     0 24px 46px rgba(0, 0, 0, 0.42),
-    0 0 1.25rem rgba(87, 156, 255, 0.22);
+    0 0 1.25rem rgba(127, 145, 255, 0.22);
   z-index: 5;
 }
 
 .project-media {
   margin: 0;
   aspect-ratio: 16 / 10;
-  background: linear-gradient(145deg, #1a2533, #141f2d);
+  background: linear-gradient(145deg, #1b1d3b, #131429);
   border-bottom: 1px solid var(--line);
 }
 
@@ -412,8 +412,8 @@ main {
 .project-links a {
   text-decoration: none;
   color: var(--link);
-  border: 1px solid #365376;
-  background: #132339;
+  border: 1px solid #3c427c;
+  background: #171a34;
   padding: 0.2rem 0.55rem;
   border-radius: 999px;
   font-family: "Trebuchet MS", "Gill Sans", sans-serif;
@@ -424,8 +424,8 @@ main {
 
 .project-links a:hover,
 .project-links a:focus-visible {
-  color: #cfe2ff;
-  border-color: #4f78a9;
+  color: #dfebff;
+  border-color: #6f7fe0;
 }
 
 .project-maintenance {
@@ -433,7 +433,7 @@ main {
   border: 1px dashed var(--line);
   border-radius: 12px;
   padding: 0.65rem 0.75rem;
-  background: #0f1722;
+  background: #10111f;
 }
 
 .project-maintenance summary {
