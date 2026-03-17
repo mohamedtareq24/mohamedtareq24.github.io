@@ -84,15 +84,13 @@
           </figure>
           <div class="project-body">
             <h3>Elastic Buffer Design and UVM Verification</h3>
-            <p>
-              Verified a rate-matching FIFO that compensates for recovered-clock and system-clock drift
-              using SKP insertion and SKP drop logic driven by configurable occupancy thresholds.
-              The UVM environment targeted continuous flow behavior, event signaling, and error-state robustness.
-            </p>
-            <p class="tags">UVM Testbench | CTC (SKP Add/Drop) | FIFO Occupancy Control</p>
+              <p>Designed a SystemVerilog elastic buffer for rate matching across independent clock domains using asynchronous FIFO, SKP insert/drop control, and APB programmability.</p>
+              <p>Verified the design through a modular UVM environment with clock, APB, read, and write UVCs, RAL-based register checks, a self-checking scoreboard, and constrained-random plus directed scenarios.</p>
+              <p>Automated regression across core test cases, tracking verification progress through merged functional and code coverage reports from the regression flow.</p>
+            <p class="tags">UVM Testbench | USB | SERDES | APB | RAL | PIPE interface</p>
             <p class="project-links">
               <a href="https://github.com/mohamedtareq24/Elastic-Buffer-Design-UVM-Verification" target="_blank" rel="noopener noreferrer">Repository</a>
-              <a href="https://github.com/mohamedtareq24/Elastic-Buffer-Design-UVM-Verification/blob/main/EB_features.md" target="_blank" rel="noopener noreferrer">Feature Specification</a>
+              <a href="https://github.com/mohamedtareq24/Elastic-Buffer-Design-UVM-Verification/blob/main/README.md" target="_blank" rel="noopener noreferrer">Documentation</a>
             </p>
           </div>
         </article>
