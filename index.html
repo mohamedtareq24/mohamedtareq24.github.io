@@ -80,6 +80,23 @@
 
         <article class="project-card">
           <figure class="project-media">
+            <img src="assets/qpulse-layout.png" alt="QPulse TinyECG ASIC final PnR layout on Sky130">
+          </figure>
+          <div class="project-body">
+            <h3>Q-PULSE: TinyECG Arrhythmia Classifier ASIC</h3>
+            <p>Full-stack ML-to-silicon flow for real-time ECG arrhythmia classification. A lightweight 1D CNN (TinyECG) classifies 187-sample ECG windows into 5 arrhythmia classes (Normal, SVT, Ventricular, Fusion, Unknown) targeting Sky130 silicon.</p>
+            <p>The neural network is compiled to fixed-point RTL via <b>hls4ml / Vitis HLS</b> (<code>ap_fixed&lt;10,5&gt;</code>), wrapped with a UART-AXI-Stream bridge, and verified end-to-end using a <b>cocotb + pyUVM</b> environment with a self-checking scoreboard driven by HLS C-sim golden outputs.</p>
+            <p>Hardened in <b>LibreLane</b> targeting the <b>SkyWater 130 nm</b> open-source PDK (Sky130A): 880 × 1032 µm die, 38.3% utilisation, 38,960 cells, 0 DRC errors, 0 antenna violations, positive timing slack across all corners (worst-case WS = 0.567 ns @ 40 MHz). To be fabricated by <b>SkyWater Technology</b> as one project slot on an <b>eFabless OpenFrame Caravel Multi-Project Chip</b> (Silicon Sprint 26), sponsored by the <b>American University in Cairo (AUC)</b>.</p>
+            <p class="tags">ML-to-Silicon | hls4ml | cocotb pyUVM | LibreLane | Sky130 | UART | AXI-Stream | Tapeout</p>
+            <p class="project-links">
+              <a href="https://github.com/mohamedtareq24/QPulse-Tiny-ECG-classifier-ASIC" target="_blank" rel="noopener noreferrer">Repository</a>
+              <a href="https://github.com/mohamedtareq24/QPulse-Tiny-ECG-classifier-ASIC/blob/main/README.md" target="_blank" rel="noopener noreferrer">Documentation</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <figure class="project-media">
             <img src="assets/elastic-buffer-env-bd.png" alt="Elastic Buffer UVM environment block diagram">
           </figure>
           <div class="project-body">

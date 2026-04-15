@@ -1,0 +1,169 @@
+\documentclass[a4paper,10pt]{article}
+
+% ==============================================================================
+% --- COMPACT (LOSSLESS-STYLE) FORMATTING KNOBS ---
+% ============================================================================
+
+% 1. Margins: mildly tightened to help one-page fit
+\usepackage[a4paper, top=0.25in, bottom=0.2in, left=0.52in, right=0.52in]{geometry}
+
+% 2. List spacing: slightly tighter
+\usepackage{enumitem}
+\setlist[itemize]{
+  leftmargin=1.35em,
+  rightmargin=0pt,
+  itemsep=0.7pt,
+  topsep=0.6pt,
+  parsep=0pt,
+  partopsep=0pt,
+  label=\textbullet
+}
+
+% 3. Section title spacing: compact and readable
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{3pt}{1pt}
+
+% 4. General paragraph spacing: mildly tightened
+\setlength{\parindent}{1pt}
+\setlength{\parskip}{0.4pt}
+
+% 5. Table row and line spacing: near-default with slight tightening
+\renewcommand{\arraystretch}{1.0}
+\linespread{1.0}
+
+% ==============================================================================
+% --- END OF KNOBS ---
+% ============================================================================
+
+\usepackage[hidelinks]{hyperref}
+\usepackage{fontawesome5}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\pagenumbering{gobble}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE \textbf{Mohamed Tarek Ismail}}\\[4pt]
+    New Cairo, Egypt \quad | \quad
+    \href{mailto:mohamedtarekisamil@gmail.com}{mohamedtarekisamil@gmail.com} \quad | \quad
+    +20 1507024101\quad | \quad
+    \href{https://linkedin.com/in/mtis}{LinkedIn} \quad | \quad
+    \href{https://mohamedtareq24.github.io/}{GitHub}
+    \quad Military Service: Completed
+\end{center}
+
+%--------------------------------------
+\section*{Education}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
+    \textbf{M.Sc. in Computers and Systems Engineering (CSE)} & 2025 -- Now\\
+    \textit{Ain Shams University}
+\end{tabular*}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
+    \textbf{B.Sc. in Electronics and Communication Engineering (ECE)} & 2019 -- 2024 \\
+    \textit{Ain Shams University}
+\end{tabular*}
+\vspace{1mm}
+\textbf{Graduation Project: ASIC Physical  Implementation of PULPino SoC} \hfill Sponsored by \textbf{ICpedia}
+\begin{itemize}
+    \item Executed the PnR flow using Design Compiler, ICC2, StarRC, and PrimeTime for the PULPino RISC-V SoC.
+    \item Developed TCL scripts for Floor Planning , CTS , PnR , Parasitic extraction \& Timing Sign off
+    \item Resolved MCMM timing violations via timing ECOs achieving 667 MHz timing closure.
+\end{itemize}
+
+%--------------------------------------
+\section*{Experience}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
+\textbf{Verilog \& FPGA Instructor} -- \textit{National Telecommunications Institute} & Aug 2025 -- Nov 2025 \\
+\end{tabular*}
+\begin{itemize}
+  \item Delivered lectures and labs on RTL design and FPGA implementation of HW/SW systems.
+\end{itemize}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
+\textbf{FPGA/ASIC Full-Time Intern} -- \textit{Valeo} & Oct 2024 -- Dec 2024 \\
+\end{tabular*}
+\begin{itemize}
+  \item Developed \& Integrated SV behavioral reference model for SCALA 3 LiDAR verification.
+  \item Automated FPGA state extraction scripts to initialize reference models aiding debugging.
+\end{itemize}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
+\textbf{Design \& Verification Trainee} -- \textit{ICpedia} & Aug 2024 -- Sep 2024 \\
+\end{tabular*}
+\begin{itemize}
+    \item SERDES Channel Equalization Techniques.
+    \item CDC \& RDC Techniques
+    \item UVM \& RAL
+\end{itemize}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
+\textbf{FPGA/Firmware Intern} -- \textit{SiliconArts} & Dec 2023 -- Jun 2024 \\
+\end{tabular*}
+\begin{itemize}
+  \item Executed hardware/software integration of a \textbf{Vortex RISC-V GPU} on an FPGA platform.
+  \item Integrated the AXI XDMA PCIe subsystem for host-to-FPGA data transfer and incorporated XDMA software drivers into the Vortex testing code.
+\end{itemize}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
+\textbf{Digital Design Summer Trainee} -- \textit{Analog Devices} & Aug 2023 -- Sep 2023 \\
+\end{tabular*}
+\begin{itemize}
+  \item Designed the RTL for a \textbf{3x3 matrix inversion sub-block} targeting both FPGA and ASIC flows,achieving timing closure at 300 MHz.
+\end{itemize}
+
+%--------------------------------------
+\section*{Projects}
+\textbf{Tape-Out of a Quantized CNN ECG Classifier on SkyWater 130\,nm}\hfill American University in Cairo
+\begin{itemize}
+\item Implemented a tiny ECG arrhythmia classifier using HLS4ML.\hfill
+\href{https://github.com/mohamedtareq24/QPulse-Tiny-ECG-classifier-ASIC}{\textbf{GitHub}}
+    \item Developed a \textbf{pyuvm} verification environment for end-to-end verification of the ECG inference pipeline.
+    \item Executed a host-driven FPGA prototyping flow to validate the ASIC RTL
+    \item Performed full ASIC PnR using \textbf{LibreLane}, meeting placement and routing closure under the 1\,mm$^2$ floorplan.
+\end{itemize}
+
+\textbf  {Design , Verification \& FPGA implementation of a MIPI D-PHY layer}\hfill
+\begin{itemize}
+  \item Design of a MIPI D-PHY PHY layer in SystemVerilog with clock and data lane CIL supporting HS, LP, and ULPS operating modes per the MIPI D-PHY specification.
+  \item Verified the design using a UVM testbench with a PPI UVC and SVA assertions verifying D-PHY timing specs.
+  \item Implemented the HS analog front-end on Xilinx FPGA using Xilinx IO primitives, synthesized and mapped via Vivado.
+\end{itemize}
+\textbf{SERDES Elastic Buffer Design \& Verification}\hfill  \href{https://github.com/mohamedtareq24/Elastic-Buffer-Design-UVM-Verification}{\textbf{{GitHub}}}
+\begin{itemize}
+    \item Designed the RTL for an Elastic Buffer using SystemVerilog running on 250 MHz.
+    \item Developed a UVM environment with Write and Read agents for asynchronous data domains, alongside an APB UVC that supports UVM RAL.
+    \item Developed a clock agent to model Spread Spectrum Clocking (SSC)
+    \item Verified data integrity and SKP Ordered Set handling across independent clock domains using Scoreboard \& SVA
+    \item Developed functional coverage models to ensure compliance with USB 3 Gen1 specifications.
+\end{itemize}
+
+\textbf{Multichannel Router Verification (UVM \& RAL)}
+\begin{itemize}
+    \item Built a UVM Testbench incorporating multiple Rx/Tx packet, host bus for configuration clocking \& reset UVCs.
+    \item Implemented constrained random stimulus generation and hardware register verification via RAL.
+    \item Developed a scoreboard to verify end-to-end packet routing and data integrity.
+    \item Developed Virtual sequences and system-level tests.
+\end{itemize}
+
+\textbf{AXI4 FIR Filter on Zynq MPSoC}\hfill \href{https://github.com/mohamedtareq24/DSP_Custom_AXI_IPs/blob/main/docs/FIR/Readme.md} {\textbf{GitHub}}
+\begin{itemize}
+    \item Designed a custom AXI4-Stream FIR IP using Verilog.
+    \item Integrated the hardware IP with the Zynq Processing System.
+    \item Verified data transactions and system functionality using Embedded C routines.
+\end{itemize}
+
+%--------------------------------------
+\enlargethispage{7\baselineskip}
+\vspace{1pt}
+\section*{Certifications}
+\vspace{1pt}
+\begin{itemize}[leftmargin=1.1em,itemsep=0pt,topsep=0pt,partopsep=0pt]
+  \item \textbf{SystemVerilog Accelerated Verification with UVM} \hfill \textit{Cadence}
+  \item \textbf{Essential SystemVerilog for UVM} \hfill \textit{Cadence}
+  \item \textbf{SystemVerilog Assertions} \hfill \textit{Cadence}
+\end{itemize}
+
+\end{document}
