@@ -84,10 +84,10 @@
           </figure>
           <div class="project-body">
             <h3>Q-PULSE: TinyECG Arrhythmia Classifier ASIC</h3>
-            <p>Full-stack <b>analog/mixed-signal</b> ML-to-silicon flow for real-time ECG arrhythmia classification. A lightweight 1D CNN (TinyECG) classifies 187-sample ECG windows into 5 arrhythmia classes (Normal, SVT, Ventricular, Fusion, Unknown) targeting Sky130 silicon.</p>
-            <p>The analog front-end is a <b>Wulffern TT06 8-bit SAR ADC</b> (<code>tt_um_TT06_SAR_wulffern</code>) — a Successive Approximation Register ADC in Sky130 analog primitives — which digitises the raw ECG signal before inference. The neural network is compiled to fixed-point RTL via <b>hls4ml / Vitis HLS</b> (<code>ap_fixed&lt;10,5&gt;</code>), wrapped with a UART-AXI-Stream bridge, and verified end-to-end with a <b>cocotb + pyUVM</b> environment covering both UART and ADC/JTAG stimulus paths, including a <b>mixed-signal SPICE cosimulation</b> of the SAR ADC.</p>
-            <p>Hardened in <b>LibreLane</b> targeting the <b>SkyWater 130 nm</b> open-source PDK (Sky130A): 880 × 1032 µm die, SAR ADC macro + TinyECG digital core, 0 DRC errors, 0 antenna violations, positive timing slack across all corners (worst-case WS = 0.567 ns @ 40 MHz). To be fabricated by <b>SkyWater Technology</b> as one project slot on an <b>eFabless OpenFrame Multi-Project Chip</b> (Silicon Sprint 26), sponsored by the <b>American University in Cairo (AUC)</b>.</p>
-            <p class="tags">Analog/Mixed-Signal | SAR ADC | ML-to-Silicon | hls4ml | cocotb pyUVM | SPICE Cosim | LibreLane | Sky130 | Tapeout</p>
+            <p class="tags">Analog/Mixed-Signal | SAR ADC | ML-to-Silicon | hls4ml | cocotb pyUVM | FPGA HIL | SPICE Cosim | LibreLane | Sky130 | Tapeout</p>
+            <p>End-to-end <b>analog/mixed-signal</b> ML-to-silicon flow for ECG arrhythmia classification using a lightweight TinyECG 1D CNN targeting Sky130.</p>
+            <p>The front-end uses a <b>Wulffern TT06 8-bit SAR ADC</b> (<code>tt_um_TT06_SAR_wulffern</code>) to digitise ECG data before inference. The model was compiled to fixed-point RTL with <b>hls4ml / Vitis HLS</b>, wrapped with a UART-AXI-Stream bridge, and verified with <b>cocotb + pyUVM</b> including mixed-signal SPICE cosimulation.</p>
+            <p>Implemented in <b>LibreLane</b> on the <b>SkyWater 130 nm</b> PDK as a combined SAR ADC + TinyECG chip for <b>eFabless OpenFrame MPC</b> fabrication, sponsored by the <b>American University in Cairo (AUC)</b>.</p>
             <p class="project-links">
               <a href="https://github.com/mohamedtareq24/QPulse-Tiny-ECG-classifier-ASIC" target="_blank" rel="noopener noreferrer">Repository</a>
               <a href="https://github.com/mohamedtareq24/QPulse-Tiny-ECG-classifier-ASIC/blob/main/README.md" target="_blank" rel="noopener noreferrer">Documentation</a>
@@ -101,10 +101,10 @@
           </figure>
           <div class="project-body">
             <h3>Elastic Buffer Design and UVM Verification</h3>
+            <p class="tags">UVM Testbench | USB | SERDES | APB | RAL | PIPE interface</p>
               <p>Designed a SystemVerilog elastic buffer for rate matching across independent clock domains using asynchronous FIFO, SKP insert/drop control logic, and APB programmability achieving timing closure at <b>250 MHz</b>.</p>
               <p>Verified the design through a modular UVM environment with clock, APB, read, and write UVCs, RAL-based register checks, a self-checking scoreboard, and constrained-random plus directed scenarios.</p>
               <p>Automated regression across core test cases, tracking verification progress through merged functional and code coverage reports from the regression flow.</p>
-            <p class="tags">UVM Testbench | USB | SERDES | APB | RAL | PIPE interface</p>
             <p class="project-links">
               <a href="https://github.com/mohamedtareq24/Elastic-Buffer-Design-UVM-Verification" target="_blank" rel="noopener noreferrer">Repository</a>
               <a href="https://github.com/mohamedtareq24/Elastic-Buffer-Design-UVM-Verification/blob/main/README.md" target="_blank" rel="noopener noreferrer">Documentation</a>
@@ -118,6 +118,7 @@
           </figure>
           <div class="project-body">
             <h3>APB UVM RAL Verification Environment</h3>
+            <p class="tags">APB | UVM | UVM RAL | SystemVerilog | IP-XACT</p>
             <p>
               Built a reusable UVM RAL verification environment as an extension to the Elastic Buffer project,
               for verification of the APB interface and register access.
@@ -125,9 +126,29 @@
             <p>
               Model generation is performed by the Cadence reg_verifier tool, utilizing the APB register map detailed in the IP-XACT XML format.  
             </p>
-            <p class="tags">APB | UVM | UVM RAL | SystemVerilog | IP-XACT</p>
             <p class="project-links">
               <a href="https://github.com/mohamedtareq24/apb_uvm_ral_environment" target="_blank" rel="noopener noreferrer">Repository</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <figure class="project-media">
+            <img src="assets/xdma-bd.png" alt="Vivado block design for Xilinx XDMA demo">
+          </figure>
+          <div class="project-body">
+            <h3>Xilinx XDMA Demo</h3>
+            <h3>[XDMA + Accelerator + Python]</h3>
+            <p class="tags">XDMA | PCIe | FPGA | Xilinx</p>
+            <p>
+              Built a Host&lt;---&gt;FPGA data path using Xilinx XDMA to stream data through a custom FIR accelerator on Zynq UltraScale+ kit.
+            </p>
+            <p>
+              Validated end-to-end operation with the XDMA Linux kernel driver, Python-based host control scripts, and ILA captures for AXI-Stream debugging.
+            </p>
+            <p class="project-links">
+              <a href="https://github.com/mohamedtareq24/xilinx_xdma_demo/tree/main" target="_blank" rel="noopener noreferrer">Repository</a>
+              <a href="https://github.com/mohamedtareq24/xilinx_xdma_demo/blob/main/README.md" target="_blank" rel="noopener noreferrer">Documentation</a>
             </p>
           </div>
         </article>
@@ -137,16 +158,37 @@
             <img src="assets/dsp-course-fir-ila.png" alt="System ILA capture for AXI FIR filter integration on Zynq">
           </figure>
           <div class="project-body">
-            <h3>AXI FIR Filter IP on Zynq US+</h3>
+            <h3>AXI FIR Filter IP on Baremetal Zynq US+</h3>
+            <h3>[MATLAB + AXI IP + Vitis]</h3>
+            <p class="tags">AXI FIR IP | Zynq US+ Prototyping | MATLAB | HW-SW Codesign</p>
             <p>
               Developed an AXI-compatible transposed-form FIR IP with parameterized order and data width,
-              then integrated and validated it on an AVNET U96 Zynq US+ platform using AXI-Lite/AXI-Stream,
-              simulation correlation, and software-driven register-level verification from ARM A53.
+              then integrated and validated it on an AVNET U96 Zynq US+ platform in Baremetal.
             </p>
-            <p class="tags">AXI FIR IP | Zynq US+ Prototyping | MATLAB | HW-SW Codesign</p>
             <p class="project-links">
               <a href="https://github.com/mohamedtareq24/DSP_course" target="_blank" rel="noopener noreferrer">Repository</a>
               <a href="https://github.com/mohamedtareq24/DSP_course/blob/main/docs/FIR/Readme.md" target="_blank" rel="noopener noreferrer">FIR Documentation</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <figure class="project-media">
+            <img src="assets/zybo_peta.png" alt="Vivado block design for PetaLinux AXI DMA FIR accelerator demo on Zybo Zynq-7000">
+          </figure>
+          <div class="project-body">
+            <h3>PetaLinux Demo</h3>
+            <h3>[PetaLinux + AXI DMA + Accelerator]</h3>
+            <p class="tags">PetaLinux | AXI DMA | Zybo Zynq-7000 | UIO | Verilator | AXI-Stream | Embedded Linux</p>
+            <p>
+              Brought up an end-to-end HW/SW accelerator flow on a Zybo Zynq-7000 platform using a custom FIR IP with AXI-Stream input/output, AXI-Lite control, and AXI DMA transfers between PS DDR and PL logic.
+            </p>
+            <p>
+              Reused the same software-driven test flow for RTL and on hardware using Verilator, then integrated the design into PetaLinux with UIO-mapped control registers, AXI DMA driver and userspace packaging, and device-tree updates for Linux visibility.
+            </p>
+            <p class="project-links">
+              <a href="https://github.com/mohamedtareq24/petalinux-demo" target="_blank" rel="noopener noreferrer">Repository</a>
+              <a href="https://github.com/mohamedtareq24/petalinux-demo/blob/main/README.md" target="_blank" rel="noopener noreferrer">Documentation</a>
             </p>
           </div>
         </article>
@@ -157,10 +199,10 @@
           </figure>
           <div class="project-body">
             <h3>Matrix Inversion Processor via CORDIC QR Decomposition</h3>
+            <p class="tags">CORDIC QR | MATLAB HDL Verifier| AXI-Stream | UVM Testbench | DPI-C</p>
             <p>
               3x3 matrix inversion accelerator using QR decomposition with iterative CORDIC arithmetic on a fixed-point Q3.13 datapath,AXI-Stream matrix loading, and a MATLAB reference model for algorithm correlation.
             </p>
-            <p class="tags">CORDIC QR | MATLAB HDL Verifier| AXI-Stream | UVM Testbench | DPI-C</p>
             <p class="project-links">
               <a href="https://github.com/mohamedtareq24/Matrix-Inversion-processor-" target="_blank" rel="noopener noreferrer">Repository</a>
               <a href="https://github.com/mohamedtareq24/Matrix-Inversion-processor-/blob/main/README.md" target="_blank" rel="noopener noreferrer">Project Overview</a>
@@ -174,12 +216,12 @@
           </figure>
           <div class="project-body">
             <h3>ASIC Implementation of the PULPino SoC</h3>
+            <p class="tags">RISC-V SoC | Physical Implementation | PnR Flow</p>
             <p>
               Implemented a PULPino/CV32E40P-based RISC-V microcontroller through a full physical-design
               flow including synthesis, floorplanning, power planning, placement, clock-tree synthesis,
               routing, and chip finishing, targeting High Performance DSP applications.
             </p>
-            <p class="tags">RISC-V SoC | Physical Implementation | PnR Flow</p>
             <p class="project-links">
               <a href="https://github.com/mohamedtareq24/cv32e40p" target="_blank" rel="noopener noreferrer">Repository</a>
               <a href="assets/cv32e40p-asic-wireless-charging.pdf" target="_blank" rel="noopener noreferrer">ASIC Report (PDF)</a>
@@ -193,34 +235,14 @@
           </figure>
           <div class="project-body">
             <h3>NIOS II Controlled ODE Solver (Spring-Mass-Damper)</h3>
+            <p class="tags">NIOS II | ODE Solver | Cyclone IV | VGA Interface | Embedded C | Verilog</p>
             <p>
               Implemented a hardware-accelerated ODE solver on Cyclone IV using a NIOS II soft processor,
               with JTAG-UART driven parameter input and VGA output to visualize dynamic system response in real time.
             </p>
-            <p class="tags">NIOS II | ODE Solver | Cyclone IV | VGA Interface | Embedded C | Verilog</p>
             <p class="project-links">
               <a href="https://github.com/mohamedtareq24/ODE_solver_NIOS_II" target="_blank" rel="noopener noreferrer">Repository</a>
               <a href="https://github.com/mohamedtareq24/ODE_solver_NIOS_II/blob/main/README.md" target="_blank" rel="noopener noreferrer">Project Overview</a>
-            </p>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <figure class="project-media">
-            <img src="assets/xdma-bd.png" alt="Vivado block design for Xilinx XDMA demo">
-          </figure>
-          <div class="project-body">
-            <h3>Xilinx XDMA Demo</h3>
-            <p>
-              Built a Host<--->FPGA data path using Xilinx XDMA to stream data through a custom FIR accelerator on Zynq UltraScale+.
-            </p>
-            <p>
-              Validated end-to-end operation with the XDMA Linux kernel driver, Python-based host control scripts, and ILA captures for AXI-Stream debugging.
-            </p>
-            <p class="tags">XDMA | PCIe | FPGA | Xilinx</p>
-            <p class="project-links">
-              <a href="https://github.com/mohamedtareq24/xilinx_xdma_demo/tree/main" target="_blank" rel="noopener noreferrer">Repository</a>
-              <a href="https://github.com/mohamedtareq24/xilinx_xdma_demo/blob/main/README.md" target="_blank" rel="noopener noreferrer">Documentation</a>
             </p>
           </div>
         </article>

@@ -5,7 +5,7 @@
 % ============================================================================
 
 % 1. Margins: mildly tightened to help one-page fit
-\usepackage[a4paper, top=0.25in, bottom=0.2in, left=0.52in, right=0.52in]{geometry}
+\usepackage[a4paper, top=0.15in, bottom=0.2in, left=0.5in, right=0.5in]{geometry}
 
 % 2. List spacing: slightly tighter
 \usepackage{enumitem}
@@ -13,9 +13,9 @@
   leftmargin=1.35em,
   rightmargin=0pt,
   itemsep=0.7pt,
-  topsep=0.6pt,
-  parsep=0pt,
-  partopsep=0pt,
+  topsep=0.8pt,
+  parsep=0.7pt,
+  partopsep=0.7pt,
   label=\textbullet
 }
 
@@ -26,7 +26,7 @@
 
 % 4. General paragraph spacing: mildly tightened
 \setlength{\parindent}{1pt}
-\setlength{\parskip}{0.4pt}
+\setlength{\parskip}{0.5pt}
 
 % 5. Table row and line spacing: near-default with slight tightening
 \renewcommand{\arraystretch}{1.0}
@@ -62,8 +62,8 @@
 \end{tabular*}
 
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
-    \textbf{B.Sc. in Electronics and Communication Engineering (ECE)} & 2019 -- 2024 \\
-    \textit{Ain Shams University}
+    \textbf{B.Sc. in Electronics and Communication Engineering (ECE)} & 2019 -- 2024            \\
+    \textit{Ain Shams University}                                 
 \end{tabular*}
 \vspace{1mm}
 \textbf{Graduation Project: ASIC Physical  Implementation of PULPino SoC} \hfill Sponsored by \textbf{ICpedia}
@@ -71,6 +71,9 @@
     \item Executed the PnR flow using Design Compiler, ICC2, StarRC, and PrimeTime for the PULPino RISC-V SoC.
     \item Developed TCL scripts for Floor Planning , CTS , PnR , Parasitic extraction \& Timing Sign off
     \item Resolved MCMM timing violations via timing ECOs achieving 667 MHz timing closure.
+\end{itemize}
+\textbf{Undergraduate Research Assistant} \hfill supervised by \textbf{prof. Hani Fikry} ASU ICL
+\item Design of low cost potentiostat for bacteria detection using ESP32. 
 \end{itemize}
 
 %--------------------------------------
@@ -87,7 +90,7 @@
 \end{tabular*}
 \begin{itemize}
   \item Developed \& Integrated SV behavioral reference model for SCALA 3 LiDAR verification.
-  \item Automated FPGA state extraction scripts to initialize reference models aiding debugging.
+  \item Automated FPGA state extraction scripts to initialize reference models of DSP Filters aiding debugging.
 \end{itemize}
 
 \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} l r}
@@ -111,21 +114,22 @@
 \textbf{Digital Design Summer Trainee} -- \textit{Analog Devices} & Aug 2023 -- Sep 2023 \\
 \end{tabular*}
 \begin{itemize}
-  \item Designed the RTL for a \textbf{3x3 matrix inversion sub-block} targeting both FPGA and ASIC flows,achieving timing closure at 300 MHz.
+  \item Designed the RTL for a \textbf{matrix inversion sub-block} for Least Squares Digital  Predistortion targeting both FPGA and ASIC flows,achieving timing closure at 300 MHz.
 \end{itemize}
 
 %--------------------------------------
 \section*{Projects}
-\textbf{Tape-Out of a Quantized CNN ECG Classifier on SkyWater 130\,nm}\hfill American University in Cairo
+\textbf{Tape-Out of a Quantized CNN ECG Classifier AMS chip on SkyWater 130\,nm}\hfill American University in Cairo
 \begin{itemize}
-\item Implemented a tiny ECG arrhythmia classifier using HLS4ML.\hfill
-\href{https://github.com/mohamedtareq24/QPulse-Tiny-ECG-classifier-ASIC}{\textbf{GitHub}}
-    \item Developed a \textbf{pyuvm} verification environment for end-to-end verification of the ECG inference pipeline.
-    \item Executed a host-driven FPGA prototyping flow to validate the ASIC RTL
+    \item Implemented a tiny ECG arrhythmia classifier using \textbf{HLS4ML}.\hfill \href{https://github.com/mohamedtareq24/QPulse-Tiny-ECG-classifier-ASIC}{\textbf{GitHub}}
+    \item Developed a \textbf{pyUVM} verification environment for end-to-end verification of the ECG inference pipeline.
+    \item Built a UVM-based \textbf{HIL} testing environment, reusing a PyUVM verification setup for FPGA targets.\hfill\href{https://github.com/mohamedtareq24/pyuvm-asyncio-HIL}{\textbf{GitHub}}
+    \item Executed co-simulation of an ADC macro using Spicebind to verify analog-digital operation
     \item Performed full ASIC PnR using \textbf{LibreLane}, meeting placement and routing closure under the 1\,mm$^2$ floorplan.
 \end{itemize}
 
 \textbf  {Design , Verification \& FPGA implementation of a MIPI D-PHY layer}\hfill
+\href{https://github.com/mohamedtareq24/MIPI-D-PHY-TX-RX.git}{\textbf{GitHub}}
 \begin{itemize}
   \item Design of a MIPI D-PHY PHY layer in SystemVerilog with clock and data lane CIL supporting HS, LP, and ULPS operating modes per the MIPI D-PHY specification.
   \item Verified the design using a UVM testbench with a PPI UVC and SVA assertions verifying D-PHY timing specs.
@@ -148,22 +152,14 @@
     \item Developed Virtual sequences and system-level tests.
 \end{itemize}
 
-\textbf{AXI4 FIR Filter on Zynq MPSoC}\hfill \href{https://github.com/mohamedtareq24/DSP_Custom_AXI_IPs/blob/main/docs/FIR/Readme.md} {\textbf{GitHub}}
+\textbf{AXI4 FIR Filter Design \& PetaLinux Bring-Up on Zynq}\hfill \href{https://github.com/mohamedtareq24/petalinux-demo}{\textbf{GitHub}}
 \begin{itemize}
-    \item Designed a custom AXI4-Stream FIR IP using Verilog.
-    \item Integrated the hardware IP with the Zynq Processing System.
-    \item Verified data transactions and system functionality using Embedded C routines.
+  \item Designed a Verilog FIR IP (AXI4-Stream/AXI-Lite) integrated with the Zynq PS via AXI DMA.
+  \item Built a unified C++ test harness with a DMA shim for Verilator simulation and PetaLinux execution.
+  \item Authored BitBake recipes and device tree overlays for out-of-tree modules, UIO binding, and user-space deployment.
 \end{itemize}
-
 %--------------------------------------
 \enlargethispage{7\baselineskip}
 \vspace{1pt}
-\section*{Certifications}
-\vspace{1pt}
-\begin{itemize}[leftmargin=1.1em,itemsep=0pt,topsep=0pt,partopsep=0pt]
-  \item \textbf{SystemVerilog Accelerated Verification with UVM} \hfill \textit{Cadence}
-  \item \textbf{Essential SystemVerilog for UVM} \hfill \textit{Cadence}
-  \item \textbf{SystemVerilog Assertions} \hfill \textit{Cadence}
-\end{itemize}
 
 \end{document}
